@@ -1,0 +1,23 @@
+version: "3.8"
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mydemo_app
+    volumes:
+      - ..:/workspace:cached
+    working_dir: /workspace
+    command: sleep infinity
+    ports:
+      - "8080:8080"
+
+  db:
+    image: postgres:15
+    container_name: mydemo_db
+    environment:
+      POSTGRES_USER: demo
+      POSTGRES_PASSWORD: D3m0!?
+      POSTGRES_DB: demo
+    ports:
+      - "5432:5432"

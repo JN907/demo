@@ -32,4 +32,6 @@ public class HomeController {
         log.log(Level.INFO, "calling save() method");
         return "ok, recieved data: firstname: " + data.getFirstname() + ", lastname: " + data.getLastname();
     }
+
+    
 }
