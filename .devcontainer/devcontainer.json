@@ -19,7 +19,8 @@
         "vscjava.vscode-spring-boot",
         "vmware.vscode-spring-boot",
         "GabrielBB.vscode-lombok",
-        "ms-azuretools.vscode-docker"
+        "ms-azuretools.vscode-docker",
+        "cweijan.vscode-postgresql-client2"
       ],
       "settings": {
         "java.configuration.updateBuildConfiguration": "automatic",
