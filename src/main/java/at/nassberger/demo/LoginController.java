@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class LoginController {
-    
+
     Logger logger=Logger.getLogger("at.nassberger.demo.LoginController");  
     private static String my_passwort = "passwort";
     private static String my_username = "jules";
@@ -35,6 +35,7 @@ public class LoginController {
         if (user==null) {
             logger.log(Level.INFO, "user not found: " + username);
             model.addAttribute("message", "User not found");   
+            return "login";
         } else {
             logger.log(Level.INFO, "user found: " + user.getUsername());
              
@@ -47,7 +48,12 @@ public class LoginController {
         
         model.addAttribute("username", username);
         model.addAttribute("passwort", passwort);
-        return "check";
+        if (user.getAdmin()){
+ return "admin";    
+} else {
+ return "user";    
+}
+
     }
 
 

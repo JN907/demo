@@ -15,7 +15,9 @@ public class User {
     private Long id;
     private String username;
     private String password;        
- 
+ private Boolean admin = false;
+
+
     public User() {
         super();
     }
@@ -56,5 +58,11 @@ public class User {
     public String toString() {
         return "User [id=" + id + ", username=" + username + ", password=" + password + "]";
     }       
- 
+ public Boolean getAdmin() {
+ return admin;
+}
+public void setAdmin(Boolean admin) {
+ this.admin = admin;
+}
+
 }

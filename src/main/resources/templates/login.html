@@ -8,17 +8,21 @@
     <div class="container">
         <div class="row">
             <div class=""><h1>Anmeldedaten</h1></div>
-        </div>        
+        </div> 
+        <div class="row">
+ <div class="col-md-12 alert alert-danger" th:if="${message}" th:text="${message}"></div>
+</div>
+       
         <hr>
         <form action='./check' method='POST'>
         <div class="row">
             <div class="col-md-2"><label for="username">User:</label></div>
-            <div class="col-md-6"><input type='text' name='username' class="form-control" placeholder="Username"></div>
+            <div class="col-md-6"><input type='text' name='username' class="form-control" placeholder="Username"required></div> 
             <div class="col-md-4 form-text">Bitte Username eingeben</div>
         </div>
         <div class="row">
             <div class="col-md-2"><label for="passwort">Passwort:</label></div>
-            <div class="col-md-6"><input type="password" name="passwort" class="form-control" placeholder="Passwort"></div>
+            <div class="col-md-6"><input type="password" name="passwort" class="form-control" placeholder="Passwort"required></div>
             <div class="col-md-4 form-text">Bitte Passwort eingeben</div>
         </div>
         <div class="row">
