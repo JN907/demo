@@ -1,0 +1,8 @@
+mvn spring-boot:run
+
+mvn clean install
+
+sudo apt-get update && sudo apt-get install -y git-lfs
+git lfs install
+
+mvn spring-boot:run -Dspring-boot.run.jvmArguments="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:5005"
